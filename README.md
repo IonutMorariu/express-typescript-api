@@ -45,7 +45,7 @@ To check your docker-compose version you can run:
 
 If you don't have docker-compose installed, you can get [here](https://docs.docker.com/compose/install/).
 
-### 3. Add a domain to your hosts
+### 3. Add domain to your hosts
 
 This app is setup to use a virtual host domain for development. In order for the it to work, you have to add the hostname to your `/etc/hosts` file by running:
 
@@ -73,7 +73,7 @@ In order to have SSL work on the host, you can run:
 
 Fill out the different questions with any information you want, it won't matter since it's only for development purposes. In case you take this to production you will need a real certificate provided by companies such as [Let's encrypt](https://letsencrypt.org/).
 
-**Note**: If you chose to create a different domain in step 3, you must also update the name in the command above.
+**Note**: If you chose to create a different domain in [step 3](#add-domain-to-your-hosts), you must also update the name in the command above.
 
 ### 5. Give permission to the .sh scripts
 
