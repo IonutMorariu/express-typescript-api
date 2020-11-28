@@ -106,3 +106,4 @@ dist
 #Custom file
 coverage/
 lib/
+data/

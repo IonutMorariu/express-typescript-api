@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  server:
+    container_name: api-server-dev
+    restart: always
+    build:
+      context: .
+      dockerfile: .Dockerfile.dev
+    ports:
+      - '3000:3000'
+    links:
+      - mongo
+    volumes:
+      - .:/usr/src/app
+  mongo:
+    container_name: api-db
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '27017:27017'
