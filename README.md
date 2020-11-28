@@ -23,7 +23,7 @@ To check your node version, you can run:
     output: 6.14.9
 ```
 
-If you don't have NodeJS install you can download it [here](https://nodejs.org/en/download/)
+If you don't have NodeJS install you can download it [here](https://nodejs.org/en/download/).
 
 ### 2. Have docker & docker-compose installed
 
@@ -43,11 +43,11 @@ To check your docker-compose version you can run:
     output: docker-compose version 1.27.4, build 40524192
 ```
 
-If you don't have docker installed, you can get [here](https://docs.docker.com/compose/install/).
+If you don't have docker-compose installed, you can get [here](https://docs.docker.com/compose/install/).
 
 ### 3. Add a domain to your hosts
 
-This app is setup to use a virtual host domain for development. In order for the virtual host to work, you have to add the hostname to your `/etc/hosts` file by running:
+This app is setup to use a virtual host domain for development. In order for the it to work, you have to add the hostname to your `/etc/hosts` file by running:
 
 ```bash
     echo "127.0.0.1 my-app.local" | sudo tee -a /etc/hosts
@@ -63,7 +63,7 @@ This app is setup to use a virtual host domain for development. In order for the
 ...
 ```
 
-### 3. Add a SSL support
+### 4. Add a SSL support
 
 In order to have SSL work on the host, you can run:
 
@@ -71,11 +71,11 @@ In order to have SSL work on the host, you can run:
    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./certs/my-app.local.key -out ./certs/my-app.local.crt
 ```
 
-Fill out the different questions with any information you want, it won't matter since it's only for development purposes. In case you take this to production you will need a real certificate provided by companies such as [Let's encrypt](https://letsencrypt.org/)
+Fill out the different questions with any information you want, it won't matter since it's only for development purposes. In case you take this to production you will need a real certificate provided by companies such as [Let's encrypt](https://letsencrypt.org/).
 
 **Note**: If you chose to create a different domain in step 3, you must also update the name in the command above.
 
-### 4. Give permission to the .sh scripts
+### 5. Give permission to the .sh scripts
 
 In the folder there are two `bash` scripts named `dev-up.sh` and `dev-down.sh`. They are intented to facilitate starting up and stopping the dev environment. In order to allow them to run on you machine you have to give them permission by running:
 
