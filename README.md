@@ -1,7 +1,7 @@
 # Express API with Typescript starter
 
 This repository was build as a simple tool to quickly get started with an Typescript Express API.
-It uses mongodb as a DB but it can be easily swapped out with any other db.
+It uses mongodb as a DB but it can be easily swapped out with any other one.
 
 ## Initial Setup
 
@@ -39,7 +39,7 @@ If you don't have docker installed, you can get it here for [Windows](https://do
 To check your docker-compose version you can run:
 
 ```bash
-    docker -v
+    docker-compose -v
     output: docker-compose version 1.27.4, build 40524192
 ```
 
