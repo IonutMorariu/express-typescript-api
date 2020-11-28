@@ -77,7 +77,7 @@ Fill out the different questions with any information you want, it won't matter 
 
 ### 5. Give permission to the .sh scripts
 
-In the folder there are two `bash` scripts named `dev-up.sh` and `dev-down.sh`. They are intented to facilitate starting up and stopping the dev environment. In order to allow them to run on you machine you have to give them permission by running:
+In the folder there are two `bash` scripts named `dev-up.sh` and `dev-down.sh`. They are intended to facilitate starting up and stopping the dev environment. In order to allow them to run you have to give them permission by running:
 
 ```bash
     chmod +x dev-up.sh
