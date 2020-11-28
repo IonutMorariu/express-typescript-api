@@ -13,6 +13,9 @@ services:
   server:
     container_name: api-server
     restart: always
+    environment:
+      VIRTUAL_HOST: my-app.local
+      VIRTUAL_PORT: 3000
     build:
       context: .
       dockerfile: .Dockerfile.prod
