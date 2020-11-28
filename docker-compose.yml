@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./certs:/etc/nginx/certs
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: unless-stopped
+  server:
+    container_name: api-server
+    restart: always
+    environment:
+      VIRTUAL_HOST: my-app.local
+      VIRTUAL_PORT: 3000
+    build:
+      context: .
+      dockerfile: .Dockerfile.prod
+    ports:
+      - '3000:3000'
+    links:
+      - mongo
+  mongo:
+    container_name: api-db
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '27017:27017'
